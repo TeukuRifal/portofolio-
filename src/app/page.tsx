@@ -366,6 +366,7 @@ export default function App() {
             </div>
           )}
         </div>
+      {/* About Section - Applying Discoverability */}
       </section>
 
       {/* About Section - Applying Discoverability */}
@@ -377,33 +378,28 @@ export default function App() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <Card className="p-8 md:p-12 bg-white border border-gray-200 hover:shadow-md transition-shadow duration-300">
+          <Card className="p-6 md:p-10 bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-shadow duration-300">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="relative h-64 rounded-lg overflow-hidden border-4 border-white shadow-md">
-                <Image
-                  src="/rifal_pp.png"
-                  alt="Working on laptop"
-                  fill
-                  className="object-cover"
-                />
+              <div className="flex justify-center md:justify-end">
+                <div className="relative h-56 w-56 md:h-64 md:w-64 rounded-xl overflow-hidden border-4 border-blue-100 shadow-md">
+                  <Image
+                    src="/rifal_pp.png"
+                    alt="Working on laptop"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">My Professional Journey</h3>
-                <p className="text-gray-600 mb-4">
-                  As a Computer Science graduate with a passion for problem-solving, I specialize in creating intuitive digital experiences. My journey began when I built my first website at 16, sparking a lifelong fascination with technology.
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">My Professional Journey</h3>
+                <p className="text-gray-700 mb-3">
+                  Computer Science graduate passionate about solving problems and building intuitive digital experiences. My journey started at 16, creating my first website and sparking a lifelong fascination with technology.
                 </p>
-                <p className="text-gray-600 mb-6">
-                  With expertise in React, Next.js, and full-stack development, I bring both technical skills and creative problem-solving to every project. I'm committed to writing clean, maintainable code and staying current with industry trends.
+                <p className="text-gray-700 mb-5">
+                  Skilled in React, Next.js, and full-stack development, I combine technical expertise with creative solutions. I focus on writing clean, maintainable code and staying updated with industry trends.
                 </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button
-                    variant="outline"
-                    href="/about"
-                    className="border-blue-500 text-blue-600 hover:bg-blue-50"
-                    aria-label="Learn more about me"
-                  >
-                    My Full Story
-                  </Button>
+                <div className="flex flex-wrap gap-3">
                   <Button
                     variant="primary"
                     onClick={downloadCV}
@@ -419,46 +415,7 @@ export default function App() {
         </motion.div>
       </Section>
 
-      {/* Contact CTA Section - Applying Fitts' Law */}
-      <Section id="contact" bg="gray" className="text-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <Card className="max-w-3xl mx-auto p-8 md:p-12 bg-gradient-to-br from-white to-gray-50 border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Let's Build Something <span className="text-blue-600">Amazing</span> Together
-            </h3>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Whether you have a project in mind or just want to chat about tech, I'd love to hear from you. Get in touch today!
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button
-                variant="primary"
-                size="lg"
-                href="mailto:your.email@example.com"
-                className="shadow-lg hover:shadow-xl hover:bg-blue-600 px-8 py-4" // Larger target area
-                aria-label="Get in touch"
-              >
-                Get In Touch
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                href="tel:+1234567890"
-                className="group border-2 border-gray-300 hover:border-blue-500 px-8 py-4" // Larger target area
-                aria-label="Call me"
-              >
-                <span className="flex items-center gap-2">
-                  Call Me
-                </span>
-              </Button>
-            </div>
-          </Card>
-        </motion.div>
-      </Section>
+      
 
       <Footer />
     </div>

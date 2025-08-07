@@ -1,10 +1,13 @@
+// filepath: c:\Projek-Job\Portofolio\src\app\layout.tsx
 import './globals.css'
 import { ReactNode } from 'react'
-
 
 export const metadata = {
   title: 'Portofolio Rifal',
   description: 'Website portofolio pribadi Rifal Aulia',
+  icons: {
+    icon: '/logo_porto.jpg', //  di public
+  },
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
