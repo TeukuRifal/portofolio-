@@ -11,13 +11,8 @@ import { motion } from 'framer-motion';
 import { FiDownload, FiMail, FiGithub, FiLinkedin, FiTwitter, FiExternalLink } from 'react-icons/fi';
 
 export default function App() {
-  const [isClient, setIsClient] = useState(false);
   const [activeTab, setActiveTab] = useState('all');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true)
-  }, []);
 
 
   const containerVariants = {
@@ -157,7 +152,7 @@ export default function App() {
               variants={itemVariants}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
-                Hi, I'm <span className="text-blue-600">Teuku Rifal Aulia</span>
+               Hi, I&apos;m <span className="text-blue-600">Teuku Rifal Aulia</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-lg">
                 Passionate Full Stack Developer creating intuitive digital experiences with modern technologies
