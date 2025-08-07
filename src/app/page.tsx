@@ -6,7 +6,7 @@ import SkillCard from '@/components/SkillCard';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import { SKILLS, PROJECTS } from '@/app/utils/constants';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiDownload, FiMail, FiGithub, FiLinkedin, FiTwitter, FiExternalLink } from 'react-icons/fi';
 
