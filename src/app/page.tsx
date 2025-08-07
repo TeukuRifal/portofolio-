@@ -3,7 +3,6 @@ import Section from '../components/Section';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import SkillCard from '@/components/SkillCard';
-import ProjectCard from '../components/ProjectCard';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import { SKILLS, PROJECTS } from '@/app/utils/constants';
@@ -19,7 +18,7 @@ export default function App() {
   useEffect(() => {
     setIsClient(true)
   }, []);
-  
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -171,7 +170,7 @@ export default function App() {
                   href="#projects"
                   className="shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ease-in-out"
                   aria-label="View my projects"
-                > 
+                >
                   View My Work
                 </Button>
                 <Button
@@ -328,9 +327,11 @@ export default function App() {
                 key={project.id}
                 className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
               >
-                <img
+                <Image
                   src={project.imageUrl}
                   alt={project.title}
+                  width={400}
+                  height={192}
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
@@ -347,10 +348,16 @@ export default function App() {
                     ))}
                   </div>
                   <a
-                    href={project.projectUrl}
+                    href={project.projectUrl ? project.projectUrl : undefined}
                     className="text-blue-600 hover:underline flex items-center"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={e => {
+                      if (!project.projectUrl) {
+                        e.preventDefault();
+                        alert('Maaf, link project belum tersedia.');
+                      }
+                    }}
                   >
                     View Project <FiExternalLink className="ml-1" />
                   </a>
@@ -366,7 +373,7 @@ export default function App() {
             </div>
           )}
         </div>
-      {/* About Section - Applying Discoverability */}
+        {/* About Section - Applying Discoverability */}
       </section>
 
       {/* About Section - Applying Discoverability */}
@@ -414,8 +421,6 @@ export default function App() {
           </Card>
         </motion.div>
       </Section>
-
-      
 
       <Footer />
     </div>

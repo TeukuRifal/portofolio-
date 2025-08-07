@@ -1,4 +1,4 @@
-import { Skill, Project, Testimonial, NavItem } from '../../types/types';
+import { Skill, Project, NavItem } from '../../types/types';
 import React from 'react';
 
 import {
@@ -6,16 +6,12 @@ import {
   FaPhp,
   FaLaravel,
   FaNodeJs,
-  FaDatabase,
   FaJs,
   FaHtml5,
   FaCss3Alt,
   FaGitAlt,
-  FaGithub,
   FaFigma,
   FaDocker,
-  FaShoppingCart,
-  FaAws
 } from 'react-icons/fa';
 import {
   SiTypescript,
@@ -28,8 +24,8 @@ import {
 } from 'react-icons/si';
 
 
-import { MdHealthAndSafety, MdSchool, MdMedicalServices } from 'react-icons/md';
-import { HiOutlineAcademicCap, HiOutlineBookOpen } from 'react-icons/hi';
+import { MdSchool, MdMedicalServices } from 'react-icons/md';
+import { HiOutlineBookOpen } from 'react-icons/hi';
 export const NAV_ITEMS: NavItem[] = [
   { name: 'Home', href: '/' },
   { name: 'Projects', href: '/projects' },
@@ -184,7 +180,7 @@ export const PROJECTS: Project[] = [
     description: 'Comprehensive health record system for elderly residents in Kopelma Darussalam village',
     tags: ['Laravel', 'Vue.js', 'PHP', 'MySQL', 'web'],
     imageUrl: '/projek/remela.png',
-    projectUrl: 'https://remela.id/',
+    projectUrl: '',
     githubUrl: '#',
     icon: <MdMedicalServices className="text-green-600" size={24} />,
     features: [
@@ -202,7 +198,7 @@ export const PROJECTS: Project[] = [
     description: 'Comprehensive health record system for elderly residents in Kopelma Darussalam village',
     tags: ['Laravel', 'React', 'MySQL', 'Tailwind CSS', 'web'],
     imageUrl: '/projek/remeta.png',
-    projectUrl: 'https://remela.site',
+    projectUrl: '',
     githubUrl: '#',
     icon: <HiOutlineBookOpen className="text-purple-600" size={24} />,
     features: [
@@ -220,7 +216,7 @@ export const PROJECTS: Project[] = [
     description: 'Aplikasi Sistem Informasi dan Data Program Merdeka Belajar Provinsi Aceh',
     tags: ['Kotlin','mobile'],
     imageUrl: '/projek/sidara.jpg',
-    projectUrl: '',
+    projectUrl: 'https://play.google.com/store/apps/details?id=id.bpmpaceh.sidara&pcampaignid=web_share',
     githubUrl: '#',
     icon: <HiOutlineBookOpen className="text-purple-600" size={24} />,
     features: [
