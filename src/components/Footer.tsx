@@ -30,10 +30,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">GitHub</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Twitter</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Dribbble</a></li>
+              <li><a href="https://www.linkedin.com/in/teukurifal03/" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a></li>
+              <li><a href="https://github.com/TeukuRifal" className="text-gray-400 hover:text-white transition-colors">GitHub</a></li>
+              {/* <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Twitter</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Dribbble</a></li> */}
             </ul>
           </div>
           

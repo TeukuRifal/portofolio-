@@ -16,7 +16,12 @@ import {
   SiTailwindcss,
   SiMysql,
   SiKotlin,
+  
 } from 'react-icons/si';
+import { 
+  PiMicrosoftExcelLogoBold,
+  PiMicrosoftWordLogoBold
+ } from 'react-icons/pi';
 
 
 import { MdSchool, MdMedicalServices } from 'react-icons/md';
@@ -29,13 +34,6 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const SKILLS: Skill[] = [
-  // {
-  //   id: '1',
-  //   name: 'React',
-  //   level: 'Intermediate',
-  //   icon: <FaReact className="text-blue-500" size={24} />,
-  //   description: 'Building interactive UIs with React hooks and context API',
-  // },
   {
     id: '1',
     name: 'PHP',
@@ -148,6 +146,21 @@ export const SKILLS: Skill[] = [
   //   icon: <SiFlutter className="text-blue-500" size={24} />,
   //   description: 'Android development using Kotlin',
   // },
+  {
+    id: '17',
+    name: 'Microsoft Excel',
+    level: 'Intermediate',
+    icon: <PiMicrosoftExcelLogoBold className="text-green-600" size={24} />,
+    description: 'Data analysis, formulas, and visualization using Excel',
+  },
+  {
+    id: '18',
+    name: 'Microsoft Word',
+    level: 'Intermediate',
+    icon: <PiMicrosoftWordLogoBold className="text-blue-600" size={24} />,
+    description: 'Document creation and formatting using Word',
+  },
+
 ];
 
 export const PROJECTS: Project[] = [

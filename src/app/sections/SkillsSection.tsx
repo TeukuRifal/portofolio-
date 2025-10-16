@@ -52,7 +52,7 @@ export default function SkillsSection() {
             <div className="absolute inset-0 -z-10">
                 {/* Gradient Orbs */}
                 <motion.div
-                    className="absolute top-1/4 right-1/4 w-64 h-64 bg-purple-100/40 rounded-full blur-3xl"
+                    className="absolute  right-1/4 w-64 h-64 bg-purple-100/40 rounded-full blur-3xl"
                     animate={{
                         scale: [1, 1.1, 1],
                         opacity: [0.4, 0.6, 0.4]

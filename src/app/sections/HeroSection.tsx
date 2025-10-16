@@ -3,10 +3,23 @@
 import { motion, easeInOut, Variants } from 'framer-motion';
 import Image from 'next/image';
 import Button from '@/components/Button';
+import { useState, useEffect } from 'react';
 import { FiDownload, FiMail, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 
 type HeroSectionProps = {
     downloadCV: () => void;
+};
+
+// ✅ Generate consistent particles based on seed
+const generateParticles = (count: number = 15) => {
+    return Array.from({ length: count }).map((_, i) => ({
+        id: i,
+        size: ((i * 7) % 6) + 2, // Deterministic size based on index
+        x: (i * 13) % 100, // Deterministic position
+        y: (i * 17) % 100,
+        delay: (i * 3) % 8,
+        duration: 8 + ((i * 5) % 8),
+    }));
 };
 
 export default function HeroSection({ downloadCV }: HeroSectionProps) {
@@ -56,14 +69,15 @@ export default function HeroSection({ downloadCV }: HeroSectionProps) {
         },
     };
 
-    const particles = Array.from({ length: 15 }).map((_, i) => ({
-        id: i,
-        size: Math.random() * 6 + 2,
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        delay: Math.random() * 8,
-        duration: 8 + Math.random() * 8,
-    }));
+    // ✅ FIXED: Use deterministic particles that are the same on server and client
+    const [particles, setParticles] = useState<
+        { id: number; size: number; x: number; y: number; delay: number; duration: number }[]
+    >([]);
+
+    useEffect(() => {
+        // This will only run on client, but we need consistent initial state
+        setParticles(generateParticles(15));
+    }, []);
 
     const socialLinks = [
         { icon: FiGithub, href: 'https://github.com/rifall', label: 'GitHub' },
@@ -124,7 +138,7 @@ export default function HeroSection({ downloadCV }: HeroSectionProps) {
                         }}
                         animate={{
                             y: [0, -60, 0],
-                            x: [0, Math.random() * 20 - 10, 0],
+                            x: [0, ((p.id * 5) % 20) - 10, 0], // Deterministic movement
                             opacity: [0, 0.8, 0],
                             scale: [1, 1.2, 1],
                         }}
