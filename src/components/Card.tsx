@@ -1,16 +1,21 @@
-import React from 'react';
+// components/Card.tsx
+import React from "react";
+import { motion } from "framer-motion";
 
 type CardProps = {
   children: React.ReactNode;
   className?: string;
-  hoverEffect?: boolean;
 };
 
-const Card = ({ children, className = '', hoverEffect = true }: CardProps) => {
+const Card = ({ children, className = "" }: CardProps) => {
   return (
-    <div className={`bg-white rounded-xl p-6 shadow-sm ${hoverEffect ? 'hover:shadow-md transition-all duration-300' : ''} ${className}`}>
+    <motion.div
+      whileHover={{ y: -6, boxShadow: "0px 8px 30px rgba(0,0,0,0.1)" }}
+      transition={{ type: "spring", stiffness: 150 }}
+      className={`bg-white rounded-2xl p-6 md:p-8 shadow-sm ${className}`}
+    >
       {children}
-    </div>
+    </motion.div>
   );
 };
 

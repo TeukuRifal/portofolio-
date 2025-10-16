@@ -24,16 +24,12 @@ export type Project = {
   className?: string;
 };
 
-export type Testimonial = {
-  id: string;
-  name: string;
-  role: string;
-  company: string;
-  content: string;
-  avatar: string;
-  rating: number;
+export type Experience = {
+  id: number;
+  title: string;
+  description:string;
+  image: string;
 };
-
 export type NavItem = {
   name: string;
   href: string;
