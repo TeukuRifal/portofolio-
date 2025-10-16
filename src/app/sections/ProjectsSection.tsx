@@ -1,7 +1,6 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
-import { FiExternalLink } from 'react-icons/fi';
 import { PROJECTS } from '@/app/utils/constants';
 
 export default function ProjectsSection() {

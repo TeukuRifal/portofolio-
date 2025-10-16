@@ -2,25 +2,20 @@ import { Skill, Project, Experience, NavItem } from '../../types/types';
 import React from 'react';
 
 import {
-  FaReact,
   FaPhp,
   FaLaravel,
   FaNodeJs,
   FaJs,
   FaHtml5,
-  FaCss3Alt,
   FaGitAlt,
   FaFigma,
-  FaDocker,
 } from 'react-icons/fa';
 import {
   SiTypescript,
   SiNextdotjs,
   SiTailwindcss,
-  SiMongodb,
   SiMysql,
   SiKotlin,
-  SiFlutter
 } from 'react-icons/si';
 
 
