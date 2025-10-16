@@ -9,7 +9,7 @@ export default function ProjectsSection() {
     activeTab === 'all' ? PROJECTS : PROJECTS.filter((p) => p.tags.includes(activeTab));
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 bg-transparent">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-10">

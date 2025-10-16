@@ -8,7 +8,7 @@ import { EXPERIENCES } from "../utils/constants";
 
 export default function ExperiencesSection() {
   return (
-    <section id="experiences" className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <section id="experiences" className=" bg-transparent ">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         {/* Judul Section */}
         <motion.h2
@@ -22,7 +22,7 @@ export default function ExperiencesSection() {
         </motion.h2>
 
         {/* Daftar Pengalaman */}
-        <div className="space-y-20">
+        <div className="space-y-5">
           {EXPERIENCES.map((exp, index) => (
             <motion.div
               key={exp.id}

@@ -47,7 +47,7 @@ export default function SkillsSection() {
     };
 
     return (
-        <Section id="skills" className="relative overflow-hidden">
+        <Section id="skills" className="relative overflow-hidden bg-transparent">
             {/* Background Elements */}
             <div className="absolute inset-0 -z-10">
                 {/* Gradient Orbs */}
